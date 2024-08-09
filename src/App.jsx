@@ -1,4 +1,8 @@
 import styled from "styled-components"
+import EstilosGlobais from "./componentes/EstilosGlobais"
+import Header from "./componentes/Cabecalho"
+import BarraLateral from "./componentes/BarraLateral"
+import Banner from "./componentes/Banner"
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -9,13 +13,22 @@ const FundoGradiente = styled.div`
   width: 100%;
   min-height: 100vw;
 `
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
 
 function App() {
   
 
   return (
     <FundoGradiente>
-      
+      <EstilosGlobais />   
+      <Header /> 
+      <Container>
+        <BarraLateral />  
+        <Banner />
+      </Container>
     </FundoGradiente>
   )
 }
