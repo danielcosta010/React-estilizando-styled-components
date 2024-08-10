@@ -6,7 +6,7 @@ const ContainerEstilizado = styled.div`
   display: inline-block;
 `;
 const CampoTextoEstilizado = styled.input`
-  width: 566px;
+  max-width: 50%px;
   border-radius: 10px;
   border: 2px solid transparent;
   background-image: linear-gradient(180.61deg, #041839 7.16%, #04243F),
@@ -19,7 +19,7 @@ const CampoTextoEstilizado = styled.input`
   line-height: 20px;
   color: #e0d7ca;
 
-  @media (max-width: 744px) {
+  @media (min-width: 744px) {
     width: 392px;
   }
 `;
