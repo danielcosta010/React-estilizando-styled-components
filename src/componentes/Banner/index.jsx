@@ -2,10 +2,12 @@ import styled from "styled-components"
 
 const BannerEstilizado = styled.div`
   position: relative;
-  background: url('./banner.png') no-repeat center;
+  display: flex;
+  flex-grow: 1;
+  background: ${props => `url(${props.$backgroundImage})`} no-repeat center;
+  background-size: cover;
   border-radius: 20px;
-  width: 1156px;
-  height: 328px;
+  min-height: 328px;
   @media (max-width: 744px) {
     width: 426px;
   }
@@ -27,10 +29,10 @@ const TituloBannerEstilizado = styled.h1`
     font-size: 32px;
   }
 `
-const Banner = () => {
+const Banner = ({ texto, backgroundImage}) => {
   return (
-    <BannerEstilizado>
-      <TituloBannerEstilizado>A galeria mais completa de fotos do espaço!</TituloBannerEstilizado>
+    <BannerEstilizado $backgroundImage={backgroundImage}>
+      <TituloBannerEstilizado>{texto}</TituloBannerEstilizado>
     </BannerEstilizado>
   )
 }
