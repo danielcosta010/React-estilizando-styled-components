@@ -3,18 +3,18 @@ import BotaoIcone from "../../BotaoIcone"
 import React from "react"
 
 const Figure = styled.figure`
-    width: ${props => props.expandida ? '90%' : '460px'};
+    width: ${props => props.$expandida ? '100%' : '460px'};
     max-width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
     & > img {
         max-width: 100%;
-        border-radius: 20px 20px 0 0;
+        border-radius: ${props => props.$border ? '20px 20px 0 0' : '0'};
     }
     figcaption {
         background-color: #001634;
-        border-radius: 0px 0px 20px 20px;
+        border-radius: ${props => props.$border ? '0 0 20px 20px' : '0'};
         color: white;
         box-sizing: border-box;
         padding: 12px;
@@ -37,15 +37,16 @@ const Rodape = styled.footer`
     align-items: center;
 `
 
-const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
-    return (<Figure $expandida={expandida} id={`foto-${foto.id}`}>
+const Imagem = ({ foto, expandida = false, aoZoomSolicitado, border = true}) => {
+    return (
+    <Figure id={`foto-${foto.id}`} $expandida={expandida}  $border={border} >
         <img src={foto.path} alt={foto.alt} />
         <figcaption>
             <h3>{foto.titulo}</h3>
             <Rodape>
                 <h4>{foto.fonte}</h4>
                 <BotaoIcone>
-                    <img src="/icones/favorito.png" alt="Icone de favorito" />
+                    <img src="/icones/favorito.png" alt="Icone de favorito"/>
                 </BotaoIcone>
                 {!expandida && <BotaoIcone aria-hidden={expandida} onClick={() => aoZoomSolicitado(foto)}>
                     <img src="/icones/expandir.png" alt="Icone de expandir" />
