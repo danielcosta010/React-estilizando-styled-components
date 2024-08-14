@@ -23,6 +23,7 @@ const FormularioEstilizado = styled.form`
   padding: 0;
   & button {
     color: #ececec;
+    cursor: pointer;
     font-size: 24px;
     position: absolute;
     top: 20px;
@@ -45,7 +46,7 @@ const ModalZoom = ({ foto, aoFechar }) => {
           <DialogEstilizada open={!!foto}>
             <Imagem foto={foto} expandida={true} border={false} />
             <FormularioEstilizado method="dialog">
-              <button onClick={aoFechar}>X</button>
+              <button onClick={aoFechar}>&#215;</button>
             </FormularioEstilizado>
           </DialogEstilizada>
         </>
