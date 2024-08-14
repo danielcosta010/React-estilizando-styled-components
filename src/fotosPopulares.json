@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "titulo": "Grande Nuvem de Magalhães",
+    "path": "/imagens/populares/foto-1.png"
+  },
+  {
+    "id": "2",
+    "titulo": "Via Láctea",
+    "path": "/imagens/populares/foto-2.png"
+  },
+  {
+    "id": "3",
+    "titulo": "Lua: quarto minguante",
+    "path": "/imagens/populares/foto-3.png"
+  },
+  {
+    "id": "4",
+    "titulo": "Galáxia de Andrómeda",
+    "path": "/imagens/populares/foto-4.png"
+  },
+  {
+    "id": "5",
+    "titulo": "Estrela Pistola",
+    "path": "/imagens/populares/foto-5.png"
+  }
+]
