@@ -22,20 +22,20 @@ const Botao = styled.button`
   color: #d9d9d9;
   padding: 8px 10px;
   border-radius: 10px;
-  border: 2px solid ${props => (props.$ativo ? "#C98CF1" : "#bccebc43")};
+  border: 2px solid ${props => props.$ativo ? '#C98CF1' : '#bccebc43'};
   cursor: pointer;
 
   /* Estilos adicionais para o botão ativo */
-  ${(props) =>
+  /* ${(props) =>
     props.$ativo 
-  //  &&
-  //   `
-  //   background-image: linear-gradient(180.61deg, #50515492 7.16%, #57595b84),
-  //                     radial-gradient(circle at top left, #C98CF1, #7B78E5);
-  //   background-origin: border-box;
-  //   background-clip: padding-box, border-box;
-  // `
-  }
+   &&
+    `
+    background-image: linear-gradient(180.61deg, ),
+                      radial-gradient(circle at top left, #C98CF1, #7B78E5);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  `
+  } */
 `;
 
 const ContainerBotao = styled.div`
@@ -45,7 +45,7 @@ const ContainerBotao = styled.div`
 `;
 
 const Tags = () => {
-  const [ativoId, setAtivoId] = useState(null); // Estado para rastrear o botão ativo
+  const [ativoId, setAtivoId] = useState(false); // Estado para rastrear o botão ativo
 
   return (
     <TagsContainer>
