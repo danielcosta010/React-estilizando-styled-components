@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 import BotaoIcone from "../../BotaoIcone"
-import React from "react"
+import React, { useState } from "react"
 
 const Figure = styled.figure`
     width: ${props => props.$expandida ? '100%' : '460px'};
@@ -38,6 +38,11 @@ const Rodape = styled.footer`
 `
 
 const Imagem = ({ foto, expandida = false, aoZoomSolicitado, border = true}) => {
+    const [favoritoAtivo, setFavoritoAtivo] = useState(false);
+
+    const alternarFavorito = () => {
+        setFavoritoAtivo(!favoritoAtivo)
+    }
     return (
     <Figure id={`foto-${foto.id}`} $expandida={expandida}  $border={border} >
         <img src={foto.path} alt={foto.alt} />
@@ -45,8 +50,10 @@ const Imagem = ({ foto, expandida = false, aoZoomSolicitado, border = true}) => 
             <h3>{foto.titulo}</h3>
             <Rodape>
                 <h4>{foto.fonte}</h4>
-                <BotaoIcone>
-                    <img src="/icones/favorito.png" alt="Icone de favorito"/>
+                <BotaoIcone onClick={alternarFavorito}>
+                    <img 
+                        src={favoritoAtivo ? "/icones/favorito-ativo.png" : "/icones/favorito.png"} 
+                        alt="Icone de favorito"/>
                 </BotaoIcone>
                 {!expandida && <BotaoIcone aria-hidden={expandida} onClick={() => aoZoomSolicitado(foto)}>
                     <img src="/icones/expandir.png" alt="Icone de expandir" />
