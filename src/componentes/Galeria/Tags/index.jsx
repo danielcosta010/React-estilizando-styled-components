@@ -44,8 +44,8 @@ const ContainerBotao = styled.div`
   align-items: center;
 `;
 
-const Tags = () => {
-  const [ativoId, setAtivoId] = useState(false); // Estado para rastrear o botão ativo
+const Tags = ({setTag}) => {
+  const [ativoId, setAtivoId] = useState(false);
 
   return (
     <TagsContainer>
@@ -55,7 +55,10 @@ const Tags = () => {
           <Botao
             key={tag.id}
             $ativo={tag.id === ativoId}
-            onClick={() => setAtivoId(tag.id)} // Atualiza o estado ativoId ao clicar
+            onClick={() => {
+              setAtivoId(tag.id)
+              setTag(tag.tag)}
+            }
           >
             {tag.titulo}
           </Botao>
