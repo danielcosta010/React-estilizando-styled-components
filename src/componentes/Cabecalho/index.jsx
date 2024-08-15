@@ -6,16 +6,13 @@ const HeaderEstilizado = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  img {
-    
-  }
 `
 
-const Header = () => {
+const Header = ({setFiltro}) => {
   return (
     <HeaderEstilizado>
       <img src="./logo.png" alt="Imagem logo do space app" />
-      <CampoTexto />
+      <CampoTexto setFiltro={setFiltro}/>
     </HeaderEstilizado>
   )
 }
