@@ -32,6 +32,10 @@ const FormularioEstilizado = styled.form`
     font-weight: 900;
     border: none;
   }
+  & button:hover {
+      border:1px solid #ffffff4f;
+      box-sizing: border-box;
+    }
 `;
 
 const ModalZoom = ({ foto, aoFechar }) => {
