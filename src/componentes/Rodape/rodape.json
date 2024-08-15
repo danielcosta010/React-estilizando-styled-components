@@ -1,0 +1,17 @@
+[
+  {
+    "path": "imagens/sociais/facebook.svg",
+    "alt": "Icone do facebook",
+    "link": "http://www.facebook.com.br"
+  },
+  {
+    "path": "imagens/sociais/twitter.svg",
+    "alt": "Icone do twitter",
+    "link": "http://www.twitter.com"
+  },
+  {
+    "path": "imagens/sociais/instagram.svg",
+    "alt": "Icone do instagram",
+    "link": "http://www.instagram.com.br"
+  }
+]
